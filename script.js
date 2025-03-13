@@ -24,7 +24,9 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
-
+  
+  //Кнопка для прокрутки
+  
 document.addEventListener("DOMContentLoaded", function () {
     const scrollToTopButton = document.querySelector(".scroll-to-top");
 
