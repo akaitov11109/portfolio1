@@ -153,6 +153,26 @@ a:hover {
     transition: all 0.3s ease-in-out;
 }
 
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgba(0, 123, 255, 0); /* Прозрачный фон */
+    color: white;
+    border: none;
+    padding: 15px; /* Сделаем кнопку больше */
+    border-radius: 50%;
+    font-size: 30px; /* Увеличиваем размер шрифта */
+    cursor: pointer;
+    display: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.scroll-to-top:hover {
+    background-color: rgba(0, 226, 238, 0.293); /* Более насыщенный фон при наведении */
+    transform: scale(1.1); /* Эффект увеличения кнопки */
+}
+
 @media (max-width: 768px) {
     #projects {
         grid-template-columns: 1fr;

@@ -24,3 +24,15 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const scrollToTopButton = document.querySelector(".scroll-to-top");
+
+    window.addEventListener("scroll", function () {
+        if (window.scrollY > 300) {
+            scrollToTopButton.style.display = "block";
+        } else {
+            scrollToTopButton.style.display = "none";
+        }
+    });
+});
