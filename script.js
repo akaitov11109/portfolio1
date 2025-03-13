@@ -15,4 +15,12 @@ document.addEventListener("DOMContentLoaded", function () {
             burger.classList.remove("active");
         });
     });
+
+    // Закрытие бургер-меню при прокрутке страницы
+    window.addEventListener("scroll", function () {
+        if (nav.classList.contains("active")) {
+            nav.classList.remove("active");
+            burger.classList.remove("active");
+        }
+    });
 });
