@@ -1,0 +1,219 @@
+@font-face {
+    font-family: RubikDirt;
+    src: url('/fonts/RubikDirt-Regular.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: linear-gradient(135deg, #2C3E50, #4CA1AF);
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    align-items: center;
+    font-family: RubikDirt;
+    font-size: 2em;
+}
+
+.container, .main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+
+.nav-bar a {
+    display: inline-block;
+    transform-origin: center;
+    transition: transform 0.3s;
+    text-decoration: none;
+    color: black;
+    margin: 1rem;
+
+}
+.nav-bar a:hover {
+    color: white;
+    transform: scale(1.2);
+}
+
+.op {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#about {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+#about ul li {
+    list-style: none;
+}
+#projects {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+    margin-top: 200px;
+    margin-bottom: 200px;
+    text-align: center;
+    font-size: large;
+    color: white;
+}
+
+
+.project-card { 
+    position: relative;
+    grid-column: span 4; 
+    padding: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+
+
+.project-card img {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+}
+
+.footer-container {
+    background: linear-gradient(135deg, #1E2A38, #3C5267);
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+    border-top: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-container .text-footer p {
+    font-size: 1.2em;
+    font-weight: bold;
+    opacity: 0.8;
+}
+
+.footer-container .links {
+    margin-top: 15px;
+}
+
+.footer-container .links a {
+    color: #B0C4DE;
+    margin: 0 15px;
+    font-size: 1.1em;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.footer-container .links a:hover {
+    color: white;
+    transform: scale(1.1);
+}
+
+a {
+    color: #B0C4DE;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.op img {
+    width: 100px;
+    border-radius: 50%;
+}
+
+.project-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Базовые стили бургера */
+.burger-menu {
+    display: none; /* По умолчанию скрыто */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.burger-menu span {
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    #projects {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-container .text-footer p {
+        font-size: 1em;
+    }
+
+    .footer-container .links a {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 768px) {
+    .burger-menu {
+        display: flex;
+    }
+
+    .nav-bar {
+        display: none;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 200px;
+        text-align: center;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .nav-bar a {
+        display: block;
+        padding: 10px;
+        color: white;
+    }
+
+    /* Показываем меню при активации */
+    .nav-bar.active {
+        display: flex;
+    }
+
+    /* Анимация для бургер-меню */
+    .burger-menu.active span:nth-child(1) {
+        transform: translateY(10px) rotate(45deg);
+    }
+
+    .burger-menu.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burger-menu.active span:nth-child(3) {
+        transform: translateY(-10px) rotate(-45deg);
+    }
+}
