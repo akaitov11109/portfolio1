@@ -1,6 +1,6 @@
 @font-face {
     font-family: RubikDirt;
-    src: url('/fonts/RubikDirt-Regular.ttf');
+    src: url('./fonts/RubikDirt-Regular.ttf');
 }
 
 * {
