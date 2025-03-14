@@ -33,3 +33,21 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const scrollToTopButton = document.querySelector(".scroll-to-top");
+
+    window.addEventListener("scroll", function () {
+        if (window.scrollY > 300) {
+            scrollToTopButton.style.display = "block";
+            scrollToTopButton.style.opacity = "1";
+        } else {
+            scrollToTopButton.style.opacity = "0";
+            setTimeout(() => {
+                if (window.scrollY <= 300) {
+                    scrollToTopButton.style.display = "none";
+                }
+            }, 300); // Даем время для анимации исчезновения
+        }
+    });
+});
