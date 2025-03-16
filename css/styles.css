@@ -3,7 +3,10 @@
     padding: 0;
 }
 body {
-    background: linear-gradient(135deg, #2C3E50, #4CA1AF);
+    
+    background-image: url('/img/dried-leaves-gray-blank-background.jpg');
+    background-repeat: repeat;
+    background-size: contain;
 }
 .container {
     display: flex;
@@ -67,6 +70,10 @@ body {
     border-radius: 10px;
     overflow: hidden;
     cursor: pointer;
+    background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    backdrop-filter: blur(5px);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 
@@ -78,8 +85,8 @@ body {
 }
 
 .footer-container {
-    background: linear-gradient(135deg, #1E2A38, #3C5267);
-    color: white;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: rgb(249, 249, 249);
     text-align: center;
     padding: 30px 0;
     border-top: 2px solid rgba(255, 255, 255, 0.2);
@@ -108,7 +115,7 @@ body {
 }
 
 a {
-    color: #B0C4DE;
+    color: #202429;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease-in-out;
@@ -132,6 +139,7 @@ a:hover {
 
 .project-card:hover {
     transform: scale(1.05);
+    box-shadow: 0 6px 25px rgba(0,0,0,0.5);
     transition: transform 0.3s ease-in-out;
 }
 
@@ -171,6 +179,17 @@ a:hover {
 .scroll-to-top:hover {
     background-color: rgba(0, 226, 238, 0.293); /* Более насыщенный фон при наведении */
     transform: scale(1.1); /* Эффект увеличения кнопки */
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 @media (max-width: 768px) {
